@@ -1,4 +1,4 @@
-﻿using Ecommerce.StockService.Repositories;
+﻿using Ecommerce.StockService.Interfaces;
 
 namespace Ecommerce.StockService.Messaging
 {

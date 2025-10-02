@@ -5,6 +5,6 @@ namespace Ecommerce.StockService.Interfaces
     public interface IProductRepository
     {
         Task CreateAsync(Product order);
-        Task<Product?> GetByIdAsync(Guid id);
+        Task<Product?> GetByIdAsync(int id);
     }
 }

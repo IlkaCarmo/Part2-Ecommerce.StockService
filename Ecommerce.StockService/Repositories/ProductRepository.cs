@@ -8,7 +8,7 @@ namespace Ecommerce.StockService.Repositories
     public class ProductRepository : IProductRepository
     {
         private readonly StockDbContext _context;
-        
+
         public ProductRepository(StockDbContext context)
         {
             _context = context;
@@ -20,11 +20,10 @@ namespace Ecommerce.StockService.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task<Product?> GetByIdAsync(Guid id)
+        public async Task<Product?> GetByIdAsync(int id)
         {
             return await _context.Products
-                .Include(p => p.Id)
-                .FirstOrDefaultAsync(o => o.Id == id);
+                 .FirstOrDefaultAsync(o => o.Id == id);
         }
     }
 }
